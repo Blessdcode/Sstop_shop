@@ -104,7 +104,7 @@ const Slider = () => {
     };
 
 
-    setTimeout(handleClick, 3000)
+    setTimeout(handleClick, 4000)
 
 
     return (
