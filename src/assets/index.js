@@ -30,7 +30,7 @@ import pic23 from './pic23.png'
 import pic24 from './pic24.png'
 import pic25 from './pic25.png'
 import pic26 from './pic26.png'
-
+import payment from './payment.png'
 
 export {
     logo,
@@ -50,6 +50,6 @@ export {
     pic10,
     pic11,
     pic12,
-    pic13, pic14, pic15, pic16, pic17, pic18, pic19, pic20, pic21, pic22, pic23, pic24, pic25, pic26
+    pic13, pic14, pic15, pic16, pic17, pic18, pic19, pic20, pic21, pic22, pic23, pic24, pic25, pic26, payment
 
 }

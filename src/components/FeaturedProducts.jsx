@@ -86,13 +86,12 @@ const Title = styled.p`
     /* border-radius: 10px 10px 0 0; */
 `;
 
-const Products = ({ item }) => {
+const FeaturedProducts = ({ item }) => {
     return (
         <Container>
             <Circle />
             <Image src={item.img} />
             {item.tag && <Title>{item.tag}</Title>}
-            {item.off && <Title>{item.off}</Title>}
             <Info>
                 <Icon>
                     <AiOutlineShoppingCart />
@@ -108,4 +107,4 @@ const Products = ({ item }) => {
     );
 };
 
-export default Products;
+export default FeaturedProducts;

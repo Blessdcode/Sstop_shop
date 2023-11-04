@@ -6,6 +6,7 @@ import Categories from '../components/Categories'
 import Product from '../components/Product'
 import Newsletter from '../components/Newsletter'
 import Footer from '../components/Footer'
+import FeaturedProduct from '../components/FeaturedProduct'
 
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
             <Categories />
             <Product />
             <Newsletter />
+            <FeaturedProduct/>
             <Footer />
         </div>
     )

@@ -8,11 +8,12 @@ import {
 
 } from "react-icons/ai";
 
-import { logo } from '../assets'
+import { logo, payment } from '../assets'
 import styled from "styled-components";
 
 const Container = styled.div`
     display: flex;
+    flex-wrap: wrap;
   `;
 
 const Left = styled.div`
@@ -144,7 +145,7 @@ const Footer = () => {
                 <ContactItem>
                     <AiFillMail style={{ marginRight: "10px" }} /> contact@lama.dev
                 </ContactItem>
-                <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
+                <Payment src={payment} />
             </Right>
         </Container>
     );
