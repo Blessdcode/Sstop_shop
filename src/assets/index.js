@@ -26,11 +26,15 @@ import pic19 from './pic19.jpg'
 import pic20 from './pic20.jpg'
 import pic21 from './pic21.jpg'
 import pic22 from './pic22.jpg'
+import pic23 from './pic23.png'
+import pic24 from './pic24.png'
+import pic25 from './pic25.png'
+import pic26 from './pic26.png'
 
 
 export {
     logo,
-    banner_1, 
+    banner_1,
     banner_2,
     banner_3,
     banner_4,
@@ -46,6 +50,6 @@ export {
     pic10,
     pic11,
     pic12,
-    pic13,pic14,pic15,pic16,pic17,pic18,pic19,pic20,pic21,pic22
-    
+    pic13, pic14, pic15, pic16, pic17, pic18, pic19, pic20, pic21, pic22, pic23, pic24, pic25, pic26
+
 }
