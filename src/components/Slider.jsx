@@ -2,6 +2,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from 'react-icons/ai'
 import { sliderItems } from '../data'
+import { mobile } from "../reponsive";
 
 
 // /*Styling */
@@ -12,8 +13,8 @@ const Container = styled.div`
    display: flex;
    position: relative;
    overflow: hidden;
-   /* background-color: #230b3a; */
    margin-top: 2rem;
+   ${mobile({ display: "none" })}
 `
 
 

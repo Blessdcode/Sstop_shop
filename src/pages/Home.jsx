@@ -7,12 +7,19 @@ import Product from '../components/Product'
 import Newsletter from '../components/Newsletter'
 import Footer from '../components/Footer'
 import FeaturedProduct from '../components/FeaturedProduct'
+import SingleProduct from '../pages/SingleProduct'
+import Login from '../pages/Login'
+import Register from '../pages/Register'
+import Cart from './Cart'
+
+
 
 
 const Home = () => {
     return (
         <div>
-            <Announcement />
+          
+            <Announcement />    
             <Navbar />
             <Slider />
             <Categories />

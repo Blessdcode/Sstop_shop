@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { featuredProducts } from "../data";
+import Slider from "react-slick";
+// import "slick-carousel/slick/slick.css";
 
 const Container = styled.div`
     /* margin: 10px; */
@@ -47,17 +49,25 @@ const Section = styled.section`
 `
 
 const FeaturedProduct = () => {
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 2,
+        slidesToScroll: 1
+    };
     return (
         <Section>
             <Title>Related Products</Title>
             <Container>
-                {featuredProducts.map((item) => (
-                    <Wrapper key={item.id}>
-                        <Flex>
-                            <Image src={item.img} alt={item.type} />
-                        </Flex>
-                    </Wrapper>
-                ))}
+
+                    {featuredProducts.map((item) => (
+                        <Wrapper key={item.id}>
+                            <Flex>
+                                <Image src={item.img} alt={item.type} />
+                            </Flex>
+                        </Wrapper>
+                    ))}
             </Container>
         </Section>
     );

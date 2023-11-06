@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { AiOutlineSend } from "react-icons/ai"
+import { mobile } from "../reponsive";
 
 
 const Container = styled.div`
@@ -9,6 +10,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-bottom: 2rem;
 `;
 const Title = styled.h1`
   font-size: 70px;
@@ -19,6 +21,8 @@ const Desc = styled.div`
   font-size: 24px;
   font-weight: 300;
   margin-bottom: 20px;
+  ${mobile({ textAlign: "center" })}
+
 
 `;
 
@@ -30,6 +34,8 @@ const InputContainer = styled.div`
   justify-content: space-between;
   border: 1px solid lightgray;
   border-radius: 6px;
+  ${mobile({ width: "80%" })}
+
 `;
 
 const Input = styled.input`

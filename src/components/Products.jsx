@@ -1,6 +1,10 @@
 
-import { AiOutlineShoppingCart, AiOutlineSearch, AiFillHeart } from 'react-icons/ai'
+import { AiOutlineShoppingCart, AiOutlineSearch, AiFillHeart,  } from 'react-icons/ai'
+import { MdOpenInNew  } from 'react-icons/md'
+import { useNavigate } from 'react-router-dom';
 import styled from "styled-components";
+
+
 
 const Info = styled.div`
     opacity: 0;
@@ -29,6 +33,7 @@ const Container = styled.div`
     justify-content: center;
     background-color: #f5fbfd;
     position: relative;
+    overflow: hidden;
     border-radius: 10px;
   
     &:hover ${Info}{
@@ -50,6 +55,10 @@ const Image = styled.img`
     border-radius: 10px;
     object-fit: cover;
     object-position: center;
+    ${Container}:hover & {
+    transform: scale(1.2);
+    transition: transform .5s ease;
+  }
   `;
 
 const Icon = styled.div`
@@ -87,25 +96,26 @@ const Title = styled.p`
 `;
 
 const Products = ({ item }) => {
-    return (
-        <Container>
-            <Circle />
-            <Image src={item.img} />
-            {item.tag && <Title>{item.tag}</Title>}
-            {item.off && <Title>{item.off}</Title>}
-            <Info>
-                <Icon>
-                    <AiOutlineShoppingCart />
-                </Icon>
-                <Icon>
-                    <AiOutlineSearch />
-                </Icon>
-                <Icon>
-                    <AiFillHeart />
-                </Icon>
-            </Info>
-        </Container>
-    );
+  const navigate = useNavigate()
+  return (
+    <Container>
+      <Circle />
+      <Image src={item.img} />
+      {item.tag && <Title>{item.tag}</Title>}
+      {item.off && <Title>{item.off}</Title>}
+      <Info>
+        <Icon>
+          <AiOutlineShoppingCart />
+        </Icon>
+        <Icon>
+          <MdOpenInNew onClick={()=> navigate('/singleProduct')}/>
+        </Icon>
+        <Icon>
+          <AiFillHeart />
+        </Icon>
+      </Info>
+    </Container>
+  );
 };
 
 export default Products;

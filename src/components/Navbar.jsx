@@ -2,16 +2,24 @@ import React from 'react'
 import styled from 'styled-components'
 import { AiOutlineSearch, AiOutlineShoppingCart } from 'react-icons/ai'
 import { logo } from '../assets'
+import { mobile } from "../reponsive";
+import { Link, useNavigate } from 'react-router-dom';
+import Newsletter from './Newsletter';
+import Announcement from './Announcement';
 
 
 const Container = styled.div`
     height: 60px;
+  ${mobile({ height: "50px" })}
+
 `
 const Wrapper = styled.div`
     padding: 10px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+  ${mobile({ padding: "10px 0px" })}
+
     
 `
 // Left side
@@ -23,6 +31,8 @@ const Language = styled.div`
     align-items: center;
     font-size: 14;
   cursor: pointer;
+  ${mobile({ display: "none" })}
+
 `
 const SearchContainer = styled.div`
   border: 1px solid lightgray;
@@ -35,6 +45,8 @@ const SearchContainer = styled.div`
 const Input = styled.input`
     border: none;
     outline: none;
+  ${mobile({ width: "50px" })}
+
 `
 
 
@@ -49,6 +61,8 @@ const LogoCon = styled.div`
 `
 const Logo = styled.h1`
     font-weight: bold;
+  ${mobile({ fontSize: "24px" })}
+
 `
 
 const Right = styled.div`
@@ -57,16 +71,22 @@ const Right = styled.div`
     align-items: center;
     justify-content: flex-end;
     position: relative;
+  ${mobile({ flex: 2, justifyContent: "center" })}
+
 `
 
 const MenuItem = styled.div`
     font-size: 16px;
     cursor: pointer;
-    margin-left: 21px;
+    margin-left: 25px;    
     font-weight: 500;
     text-transform: uppercase;
+    ${mobile({ fontSize: "12px", marginLeft: "10px" })}
+    &:hover{
+      color: palevioletred;
+    }
 `
-const Bage = styled.div`
+const Badge = styled.div`
   position: relative;
 `
 const Span = styled.span`
@@ -81,8 +101,12 @@ bottom: 30px;
 font-size: 12px;
 `
 
+
 const Navbar = () => {
+  const navigate = useNavigate()
   return (
+    <>
+    {/* <Announcement/> */}
     <Container>
       <Wrapper>
         <Left>
@@ -95,23 +119,24 @@ const Navbar = () => {
           </Language>
         </Left>
         <Center>
-          <LogoCon>
-            <img src={logo} alt="Logo" aria-label='LOGO' />
-            <Logo>StopShop</Logo>
-          </LogoCon>
+            <LogoCon>
+              <img src={logo} alt="Logo" aria-label='LOGO' />
+              <Logo onClick={() => navigate('/')}>StopShop</Logo>
+            </LogoCon>
         </Center>
         <Right>
-          <MenuItem>Register</MenuItem>
-          <MenuItem>Log In</MenuItem>
+          <MenuItem onClick={() => navigate('/register')} >Register</MenuItem>
+          <MenuItem onClick={() => navigate('/login')}>Log In</MenuItem>
           <MenuItem>
-            <Bage>
+            <Badge>
               <Span>10</Span>
-              <AiOutlineShoppingCart size={42} />
-            </Bage>
+              <AiOutlineShoppingCart size={42} onClick={() => navigate('/cart')} />
+            </Badge>
           </MenuItem>
         </Right>
       </Wrapper>
     </Container>
+    </>
   )
 }
 
