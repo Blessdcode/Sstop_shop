@@ -1,19 +1,19 @@
 import { useContext } from "react";
-import { ShopContext } from '../context/shopeContext'
+// import { ShopContext } from '../context/shopeContext'
 import { popularProducts } from "../data";
-import { CartItems } from './CartItems'
+import { CartDet } from './CartDet'
 
 
 
 const Cart = () =>{
-    const { cartItems, getTotalAmount } = useContext(ShopContext)
+    // const { cartItems, getTotalAmount } = useContext(ShopContext)
     return(
         <div  className='cartItems'>
-        {popularProducts.map((product) => {
+        {/* {popularProducts.map((product) => {
           if (cartItems[product.id] !== 0) {
-            return <CartItems data={product} />
+            return <CartDet data={product} />
           }
-        })}
+        })} */}
       </div>
     )
 }
