@@ -3,14 +3,15 @@ import Navbar from '../components/Navbar'
 import Announcement from '../components/Announcement'
 import Slider from '../components/Slider'
 import Categories from '../components/Categories'
-import Product from '../components/Product'
+import Shop from "../pages/Shop";
+// import Product from '../components/Product'
 import Newsletter from '../components/Newsletter'
-import Footer from '../components/Footer'
 import FeaturedProduct from '../components/FeaturedProduct'
-import SingleProduct from '../pages/SingleProduct'
-import Login from '../pages/Login'
-import Register from '../pages/Register'
-import Cart from './Cart'
+import Footer from '../components/Footer'
+// import SingleProduct from '../pages/SingleProduct'
+// import Login from '../pages/Login'
+// import Register from '../pages/Register'
+// import Cart from './Cart'
 
 
 
@@ -18,15 +19,16 @@ import Cart from './Cart'
 const Home = () => {
     return (
         <div>
-          
-            <Announcement />    
+
+            <Announcement />
             <Navbar />
             <Slider />
             <Categories />
-            <Product />
-            <Newsletter />
+            <Shop />
+            <Newsletter/>
             <FeaturedProduct/>
-            <Footer />
+            <Footer/>
+
         </div>
     )
 }

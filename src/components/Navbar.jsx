@@ -4,7 +4,7 @@ import { AiOutlineSearch, AiOutlineShoppingCart } from 'react-icons/ai'
 import { logo } from '../assets'
 import { mobile } from "../reponsive";
 import { Link, useNavigate } from 'react-router-dom';
-import Newsletter from './Newsletter';
+// import Newsletter from './Newsletter';
 import Announcement from './Announcement';
 
 

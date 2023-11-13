@@ -63,6 +63,7 @@ export const categories = [
 export const popularProducts = [
   {
     id: "fruihuihui",
+    name:"Stylish",
     img: pic8,
     dec: "Describtion",
     price: 380.56,
