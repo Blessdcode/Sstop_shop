@@ -14,7 +14,7 @@ const Product = (props) => {
     const handlerToCart = () => {
         addToCart(id);
         toast.success(`${name} has been added to the cart!!!`, {
-            position: "top-center",
+            position: "top-left",
         });
     };
 
@@ -36,7 +36,7 @@ const Product = (props) => {
                     <AiFillHeart />
                 </div>
             </div>
-
+            <ToastContainer />
         </div>
     )
 }
