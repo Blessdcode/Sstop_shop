@@ -70,15 +70,23 @@ export const ShopContextProvider = (props) => {
 
     // total amount
     const getTotalAmount = () => {
-        let totalAmount = 0
+        let totalAmount = 0;
+      
+        // Calculate the total amount for items in the cart
         for (const item in cartItems) {
-            if (cartItems[item] > 0) {
-                let itemInfo = popularProducts.find((product) => product.id === Number(item))
-                totalAmount += cartItems[item] * itemInfo.price
-            }
+          if (cartItems[item] > 0) {
+            const itemInfo = popularProducts.find((product) => product.id === Number(item));
+            totalAmount += cartItems[item] * itemInfo.price;
+          }
         }
-        return totalAmount
-    }
+      
+        // Add the shipping fee to the total amount
+        const shippingFee = 25.37; // Replace with your actual shipping fee
+        totalAmount += shippingFee;
+      
+        return totalAmount;
+      };
+      
 
 
 

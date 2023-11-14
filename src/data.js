@@ -63,7 +63,7 @@ export const categories = [
 export const popularProducts = [
   {
     id: 1,
-    name:"Men OverSize Fit short sleeve",
+    name: "Men OverSize Fit short sleeve",
     img: pic8,
     dec: "Describtion",
     price: 5098,
@@ -73,7 +73,7 @@ export const popularProducts = [
   },
   {
     id: 2,
-    name:"Blouse-Black-Fitted",
+    name: "Blouse-Black-Fitted",
     img: pic23,
     dec: "Describtion",
     price: 19872,
@@ -92,7 +92,7 @@ export const popularProducts = [
   },
   {
     id: 4,
-    name:"Original Sneakers SuperStar",
+    name: "Original Sneakers SuperStar",
     img: pic15,
     dec: "Describtion",
     price: 8000,
@@ -102,7 +102,7 @@ export const popularProducts = [
   },
   {
     id: 5,
-    name:"Nike Sneakers ",
+    name: "Nike Sneakers ",
     img: pic12,
     dec: "Describtion",
     price: 28545,
@@ -112,7 +112,7 @@ export const popularProducts = [
   },
   {
     id: 6,
-    name:"lady red high heel",
+    name: "lady red high heel",
     img: pic4,
     dec: "Describtion",
     price: 7556,
@@ -126,15 +126,15 @@ export const popularProducts = [
     img: pic24,
     dec: "Describtion",
     price: 10800,
-    newPrice:7560,
+    newPrice: 7560,
     type: "gown",
     category: "women",
-    off: "30% offer"
+    // off: "30% offer"
 
   },
   {
     id: 8,
-    name:"Female Casual corpreate",
+    name: "Female Casual corpreate",
     img: pic25,
     dec: "Describtion",
     price: 12400,
@@ -143,7 +143,7 @@ export const popularProducts = [
   },
   {
     id: 9,
-    name:"Men black skmei",
+    name: "Men black skmei",
     img: pic9,
     dec: "Describtion",
     price: 25264,
@@ -152,7 +152,7 @@ export const popularProducts = [
   },
   {
     id: 10,
-     name:"Casio Men watch",
+    name: "Casio Men watch",
     img: pic7,
     dec: "Describtion",
     price: 230.46,
@@ -160,29 +160,30 @@ export const popularProducts = [
   },
   {
     id: 11,
-    name:"Pupae winter jacket",
+    name: "Pupae winter jacket",
     img: pic11,
     dec: "Describtion",
     price: 12056,
     newPrice: 8439,
     type: "women",
     category: "jacket",
-    off: "30% offer"
+    tag: "New",
+    // off: "30% offer"
   },
   {
     id: 12,
-    name:"core sneakers base",
+    name: "core sneakers base",
     img: pic14,
     dec: "Describtion",
     price: 35760,
     newPrice: 25032,
     type: "men",
     category: "shoe",
-    off: "30% offer"
+    // off: "30% offer"
   },
   {
     id: 13,
-    name:"Ladies midi shoulder bag",
+    name: "Ladies midi shoulder bag",
     img: pic20,
     dec: "Describtion",
     price: 8760,
@@ -190,31 +191,31 @@ export const popularProducts = [
     type: "women",
     category: "bag",
   },
-   
+
   {
     id: 14,
-    name:"Ladies bodycon sleeve",
+    name: "Ladies bodycon sleeve",
     img: pic26,
     dec: "Describtion",
-    price:5760,
-  
+    price: 5760,
+    tag: "New",
     type: "women",
     category: "shirt",
-   
+
 
   },
   {
     id: 15,
-    name:"Man casual sport shoe",
+    name: "Man casual sport shoe",
     img: pic21,
     dec: "Describtion",
     price: 65760,
     newPrice: 46032,
     type: "men",
     category: "shoe",
-    off: "30% offer"
+    // off: "30% offer"
   },
- 
+
 ]
 
 
@@ -240,7 +241,7 @@ export const featuredProducts = [
     type: "men",
     category: "bag",
   },
- 
+
   {
     id: "uiyuihifjk",
     img: pic5,
@@ -261,7 +262,7 @@ export const featuredProducts = [
     category: "watch",
     off: "30%"
   },
- 
+
   {
     id: "ekijuoidh",
     img: pic18,
@@ -282,6 +283,6 @@ export const featuredProducts = [
     category: "shoe",
     off: "30% offer"
   },
- 
+
 
 ]

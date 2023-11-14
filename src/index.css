@@ -123,7 +123,9 @@ body {
   text-align: center;
 }
 
-
+.originalPrice{
+  text-decoration: line-through;
+}
 
 
 /* 

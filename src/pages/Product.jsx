@@ -2,7 +2,8 @@ import React, { useContext } from 'react'
 import { AiOutlineShoppingCart, AiOutlineSearch, AiFillHeart, } from 'react-icons/ai'
 import { MdOpenInNew } from 'react-icons/md'
 import { ShopContext } from '../context/shopContext'
-import { toast } from 'react-hot-toast'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Product = (props) => {
@@ -12,7 +13,9 @@ const Product = (props) => {
 
     const handlerToCart = () => {
         addToCart(id);
-        window.alert(`${name} has been added to the cart!!!`)
+        toast.success(`${name} has been added to the cart!!!`, {
+            position: "top-center",
+        });
     };
 
 

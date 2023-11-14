@@ -1,8 +1,10 @@
 import React, { useContext } from 'react'
+import styled from "styled-components";
 import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai'
 import { Link, useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { ShopContext } from '../context/shopContext'
-import styled from "styled-components";
 import { mobile } from "../reponsive";
 
 
@@ -166,7 +168,7 @@ const Button = styled.button`
 const CartDet = (props) => {
   const { cartItems, addToCart, removeCart, updateCartItem } = useContext(ShopContext)
 
-  const { id, name, price, img, newPrice, off } = props.data
+  const { id, name, price, img, newPrice, tag, off } = props.data
   const itemTotalPrice = cartItems[id] * price;
 
   return (

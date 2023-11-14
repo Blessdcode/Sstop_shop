@@ -269,21 +269,15 @@ const Cart = () => {
               <Hr />
               <Summary>
                 <SummaryTitle>ORDER SUMMARY</SummaryTitle>
+               
+              
                 <SummaryItem>
-                  <SummaryItemText>Subtotal</SummaryItemText>
-                  <SummaryItemPrice>$ 80</SummaryItemPrice>
-                </SummaryItem>
-                <SummaryItem>
-                  <SummaryItemText>Estimated Shipping</SummaryItemText>
-                  <SummaryItemPrice>$ 5.90</SummaryItemPrice>
-                </SummaryItem>
-                <SummaryItem>
-                  <SummaryItemText>Shipping Discount</SummaryItemText>
-                  <SummaryItemPrice>$ -5.90</SummaryItemPrice>
+                  <SummaryItemText>Shipping Fee</SummaryItemText>
+                  <SummaryItemPrice><b>$</b> 25.37</SummaryItemPrice>
                 </SummaryItem>
                 <SummaryItem type="total">
                   <SummaryItemText>Total</SummaryItemText>
-                  <SummaryItemPrice>${totalAmount.toFixed(2)}</SummaryItemPrice>
+                  <SummaryItemPrice> <b>$</b> {totalAmount.toFixed(2)}</SummaryItemPrice>
                 </SummaryItem>
                 <BTNS>
                   <Button>CHECKOUT NOW</Button>
