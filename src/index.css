@@ -46,7 +46,7 @@ body {
   object-position: center;
 }
 
-.product:hover .Image{
+.product:hover .Image {
   transform: scale(1.2);
   transition: transform .5s ease;
 }
@@ -86,19 +86,163 @@ body {
   transform: scale(1.1);
 }
 
- .Title {
-margin-bottom: 20px;
-font-size: 4;
-padding: 4px;
-position: absolute;
-top: 0px;
-left: 6px;
-z-index: 9;
-background-color: #000;
-color: #fff;
-width: 40px;
-text-align: center;
-height: 40px;
-opacity: .8;
-/* border-radius: 10px 10px 0 0; */
+.Title {
+  margin-bottom: 20px;
+  font-size: 4;
+  padding: 4px;
+  position: absolute;
+  top: 0px;
+  left: 6px;
+  z-index: 9;
+  background-color: #000;
+  color: #fff;
+  width: 40px;
+  text-align: center;
+  height: 40px;
+  opacity: .8;
+  /* border-radius: 10px 10px 0 0; */
 }
+
+.productName{
+  font-size: 24px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.price{
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.Input-el{
+  font-size: 18px;
+  margin: 5px;
+  border: none;
+  outline: none;
+  width: 40px;
+  text-align: center;
+}
+
+
+
+
+/* 
+.cartDet {
+  padding: 20px;
+}
+
+.Title {
+  font-weight: 300;
+  text-align: center;
+}
+
+.TopText {
+
+  text-decoration: underline;
+  cursor: pointer;
+  margin: 0px 10px;
+}
+
+
+.Bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Info {
+  flex: 3;
+}
+
+.Product {
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.ProductDetail {
+
+  flex: 2;
+  display: flex;
+}
+
+.Image {
+
+  width: 200px;
+}
+
+.Details {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.ProductColor {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+
+
+.PriceDetail {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ProductAmountContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.ProductAmount {
+  font-size: 24px;
+  margin: 5px;
+}
+
+
+
+.ProductPrice {
+  font-size: 30px;
+  font-weight: 200;
+}
+
+
+.Hr {
+
+  background-color: #eee;
+  border: none;
+  height: 1px;
+}
+
+
+.Summary {
+  flex: 1;
+  border: 0.5px solid lightgray;
+  border-radius: 10px;
+  padding: 20px;
+  height: 50vh;
+}
+
+.SummaryTitle {
+  font-weight: 200;
+}
+
+.SummaryItem {
+  margin: 30px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.Button {
+  width: 100%;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+} */

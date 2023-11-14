@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext, useState, useEffect } from 'react';
 import styled from 'styled-components'
 import { AiOutlineSearch, AiOutlineShoppingCart } from 'react-icons/ai'
 import { logo } from '../assets'
@@ -6,7 +6,7 @@ import { mobile } from "../reponsive";
 import { Link, useNavigate } from 'react-router-dom';
 // import Newsletter from './Newsletter';
 import Announcement from './Announcement';
-
+import { ShopContext } from '../context/shopContext';
 
 const Container = styled.div`
     height: 60px;
@@ -102,40 +102,62 @@ font-size: 12px;
 `
 
 
-const Navbar = () => {
+const Navbar = (props) => {
+
+  // State to track when an item is added to the cart
+  const [itemAddedToCart, setItemAddedToCart] = useState(false);
+
+  // useEffect to reset the itemAddedToCart state after a delay
+  useEffect(() => {
+    if (itemAddedToCart) {
+      // Set itemAddedToCart to false after 2 seconds (you can adjust the delay)
+      const timeout = setTimeout(() => {
+        setItemAddedToCart(false);
+      }, 2000);
+      return () => clearTimeout(timeout);
+    }
+  }, [itemAddedToCart]);
+
+  const id = props.data && props.data.id;
+
+  const { getTotalItemCount } = useContext(ShopContext);
+
+  const { cartItems } = useContext(ShopContext);
+  const cartItemsAmount = cartItems[id];
+
   const navigate = useNavigate()
   return (
     <>
-    {/* <Announcement/> */}
-    <Container>
-      <Wrapper>
-        <Left>
-          <Language>
-            En
-            <SearchContainer>
-              <Input />
-              <AiOutlineSearch style={{ color: "gray", fontSize: "16px" }} />
-            </SearchContainer>
-          </Language>
-        </Left>
-        <Center>
+      {/* <Announcement/> */}
+      <Container>
+        <Wrapper>
+          <Left>
+            <Language>
+              En
+              <SearchContainer>
+                <Input />
+                <AiOutlineSearch style={{ color: "gray", fontSize: "16px" }} />
+              </SearchContainer>
+            </Language>
+          </Left>
+          <Center>
             <LogoCon>
               <img src={logo} alt="Logo" aria-label='LOGO' />
               <Logo onClick={() => navigate('/')}>StopShop</Logo>
             </LogoCon>
-        </Center>
-        <Right>
-          <MenuItem onClick={() => navigate('/register')} >Register</MenuItem>
-          <MenuItem onClick={() => navigate('/login')}>Log In</MenuItem>
-          <MenuItem>
-            <Badge>
-              <Span>10</Span>
-              <AiOutlineShoppingCart size={42} onClick={() => navigate('/cart')} />
-            </Badge>
-          </MenuItem>
-        </Right>
-      </Wrapper>
-    </Container>
+          </Center>
+          <Right>
+            <MenuItem onClick={() => navigate('/register')} >Register</MenuItem>
+            <MenuItem onClick={() => navigate('/login')}>Log In</MenuItem>
+            <MenuItem>
+              <Badge>
+                <Span>{getTotalItemCount()}</Span>
+                <AiOutlineShoppingCart size={42} onClick={() => navigate('/cart')} />
+              </Badge>
+            </MenuItem>
+          </Right>
+        </Wrapper>
+      </Container>
     </>
   )
 }
