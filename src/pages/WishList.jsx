@@ -15,10 +15,6 @@ import { mobile } from "../reponsive";
 
 
 
-
-
-
-
 const Container = styled.div``;
 
 const Wrapper = styled.div`
@@ -204,101 +200,102 @@ width: 200px;
 
 
 
-const Cart = () => {
-  const { cartItems, getTotalAmount, updateCartItem, getTotalItemCount } = useContext(ShopContext)
-  const totalAmount = getTotalAmount()
+const WishList = (props) => {
+    const { cartItems, getTotalAmount, updateCartItem, getTotalItemCount } = useContext(ShopContext)
+    const totalAmount = getTotalAmount()
 
-  const navigate = useNavigate()
+    const navigate = useNavigate()
 
-  const handleRemoveAll = () => {
-    // Clear the cart by setting the quantity of all items to 0
-    for (const item in cartItems) {
-      updateCartItem(0, item);
+    const handleRemoveAll = () => {
+      // Clear the cart by setting the quantity of all items to 0
+      for (const item in cartItems) {
+        updateCartItem(0, item);
+      }
+      // You can also clear the cart from local storage if needed
+      localStorage.removeItem('cart');
+      // Navigate to the checkout page
+  
+   
     }
-    // You can also clear the cart from local storage if needed
-    localStorage.removeItem('cart');
-    // Navigate to the checkout page
-
- 
-  }
-
-  return (
-    <>
-      <Announcement />
-      <Navbar />
-      <div>
-
-        {totalAmount > 0 ? (
-          <>
-
-
-            <Wrapper>
-              <Title>YOUR BAG</Title>
-              <Top>
-                <Link to='/'>
-                  <TopButton>CONTINUE SHOPPING</TopButton>
-                </Link>
-                <TopTexts>
-                  <TopText>Shopping Bag({getTotalItemCount()})</TopText>
-                  <TopText onClick={() => navigate('/wishlist')}>Your Wishlist (0)</TopText>
-                </TopTexts>
-
-              </Top>
-
-            </Wrapper>
-          </>
-        ) : (
-          <></>
-        )}
-
-        <div className='cartItems'>
-          {popularProducts.map((product) => {
-            if (cartItems[product.id] !== 0) {
-              return <CartDet data={product} key={product.id} />
-            }
-
+  
+    return (
+        <>
+            <Announcement />
+            <Navbar />
             <div>
 
+                {totalAmount > 0 ? (
+                    <>
+
+
+                        <Wrapper>
+                            <Title>YOUR BAG</Title>
+                            <Top>
+                                <Link to='/'>
+                                    <TopButton>CONTINUE SHOPPING</TopButton>
+                                </Link>
+                                <TopTexts>
+                                    <TopText>Shopping Bag({getTotalItemCount()})</TopText>
+                                    <TopText onClick={() => navigate('/wishlist')}>Your Wishlist (0)</TopText>
+                                </TopTexts>
+
+                            </Top>
+
+                        </Wrapper>
+                    </>
+                ) : (
+                    <></>
+                )}
+
+                <div className='cartItems'>
+                    {popularProducts.map((product) => {
+                        if (cartItems[product.id] !== 0) {
+                            return <CartDet data={product} key={product.id} />
+                        }
+
+                        <div>
+
+                        </div>
+                    })}
+                </div>
+
+
+                {totalAmount > 0 ? (
+                    <>
+
+
+                        <Wrapper>
+                            <Hr />
+                            <Summary>
+                                <SummaryTitle>ORDER SUMMARY</SummaryTitle>
+
+
+                                <SummaryItem>
+                                    <SummaryItemText>Shipping Fee</SummaryItemText>
+                                    <SummaryItemPrice><b>$</b> 25.37</SummaryItemPrice>
+                                </SummaryItem>
+                                <SummaryItem type="total">
+                                    <SummaryItemText>Total</SummaryItemText>
+                                    <SummaryItemPrice> <b>$</b> {totalAmount.toFixed(2)}</SummaryItemPrice>
+                                </SummaryItem>
+                                <BTNS>
+                                    <Button>CHECKOUT NOW</Button>
+                                    <Buttons onClick={handleRemoveAll}> REMOVE ALL</Buttons>
+
+                                </BTNS>
+                            </Summary>
+                        </Wrapper>
+                    </>
+                ) : (
+                    <Text>
+                        <CartE>Your cart is Empty</CartE>
+                        <Pra>Vist your watchlist</Pra>
+                    </Text>
+                )}
             </div>
-          })}
-        </div>
-
-
-        {totalAmount > 0 ? (
-          <>
-
-
-            <Wrapper>
-              <Hr />
-              <Summary>
-                <SummaryTitle>ORDER SUMMARY</SummaryTitle>
-
-
-                <SummaryItem>
-                  <SummaryItemText>Shipping Fee</SummaryItemText>
-                  <SummaryItemPrice><b>$</b> 25.37</SummaryItemPrice>
-                </SummaryItem>
-                <SummaryItem type="total">
-                  <SummaryItemText>Total</SummaryItemText>
-                  <SummaryItemPrice> <b>$</b> {totalAmount.toFixed(2)}</SummaryItemPrice>
-                </SummaryItem>
-                <BTNS>
-                  <Button>CHECKOUT NOW</Button>
-                  <Buttons onClick={handleRemoveAll}> REMOVE ALL</Buttons>
-
-                </BTNS>
-              </Summary>
-            </Wrapper>
-          </>
-        ) : (
-          <Text>
-            <CartE>Your cart is Empty</CartE>
-            <Pra>Vist your watchlist</Pra>
-          </Text>
-        )}
-      </div>
-      <Footer />
-    </>
-  )
+            <Footer />
+        </>
+    )
 }
-export default Cart
+
+export default WishList
