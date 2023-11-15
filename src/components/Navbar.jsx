@@ -2,15 +2,15 @@ import React, { useContext, useState, useEffect } from 'react';
 import styled from 'styled-components'
 import { AiOutlineSearch, AiOutlineShoppingCart } from 'react-icons/ai'
 import { logo } from '../assets'
-import { mobile } from "../reponsive";
+import { mobile,small } from "../reponsive";
 import { Link, useNavigate } from 'react-router-dom';
 // import Newsletter from './Newsletter';
 import Announcement from './Announcement';
 import { ShopContext } from '../context/shopContext';
 
 const Container = styled.div`
-    height: 60px;
-  ${mobile({ height: "50px" })}
+    height: 60px;;
+  ${mobile({ height: "40px" })}
 
 `
 const Wrapper = styled.div`
@@ -18,13 +18,21 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-  ${mobile({ padding: "10px 0px" })}
+    text-align: center;
+    ${mobile({
+      padding: "20px 0px",
+      justifyContent: "center",
+      alignItems: "flex-start",
+      width: "100%",
+      
+     })}
 
     
 `
 // Left side
 const Left = styled.div`
     flex: 1.5;  
+    ${small({ flex: "1" })}
 `
 const Language = styled.div`
     display:flex ;
@@ -53,6 +61,7 @@ const Input = styled.input`
 const Center = styled.div`
     flex: 1;
     text-align: center;
+    ${small({ flex: "0" })}
     `
 const LogoCon = styled.div`
   cursor: pointer;
@@ -81,18 +90,35 @@ const MenuItem = styled.div`
     margin-left: 25px;    
     font-weight: 500;
     text-transform: uppercase;
-    ${mobile({ fontSize: "12px", marginLeft: "10px" })}
+    ${mobile({
+  fontSize: "12px", marginLeft: "10px",
+})}
     &:hover{
       color: palevioletred;
     }
 `
+const RightEnd = styled.div`
+${mobile({
+  display: "none",
+})}
+    
+`
 const Badge = styled.div`
   position: relative;
+  align-self: center;
+  margin-top: 16px;
 `
 const Span = styled.span`
 background-color: palevioletred;
 color:White;
-padding: 6px;
+/* padding: 6px; */
+width: 26px;
+height: 26px;
+text-align: center;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 21px;
 border-radius: 50%;
 font-weight: 500;
 position: absolute;
@@ -147,8 +173,10 @@ const Navbar = (props) => {
             </LogoCon>
           </Center>
           <Right>
-            <MenuItem onClick={() => navigate('/register')} >Register</MenuItem>
-            <MenuItem onClick={() => navigate('/login')}>Log In</MenuItem>
+            <RightEnd>
+              <MenuItem onClick={() => navigate('/register')} >Register</MenuItem>
+              <MenuItem onClick={() => navigate('/login')}>Log In</MenuItem>
+            </RightEnd>
             <MenuItem>
               <Badge>
                 <Span>{getTotalItemCount()}</Span>

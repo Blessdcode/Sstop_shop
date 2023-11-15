@@ -14,7 +14,9 @@ const Container = styled.div`
    position: relative;
    overflow: hidden;
    margin-top: 2rem;
-   ${mobile({ display: "none" })}
+   ${mobile({ margin: "70px 0",
+   height:"120vh"
+   })}
 `
 
 
@@ -35,20 +37,37 @@ const Arrow = styled.div`
   cursor: pointer;
   /* opacity: .5; */
   z-index: 2;
-`
 
+  ${mobile({
+      top: "-50%",
+
+})}
+
+`
 const Wrapper = styled.div`
     height: 100%; 
     display: flex;
     transition: all 1.5s ease;
   transform: translateX(${(props) => props.slideIndex * -100}vw);
+  
+
 `
 const Slide = styled.div`
     width: 100vw;
     height: 100vh;
     display: flex;
     align-items: center;
+    object-fit: cover;
+    object-position: center;
     background-color: #${props => props.bg};
+    ${mobile({
+      display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "column",
+   height:"120vh"
+
+})}
 
 `
 const ImgContainer = styled.div`
@@ -57,6 +76,9 @@ const ImgContainer = styled.div`
 `
 const Image = styled.img`
   height: 100%;
+  ${mobile({
+     width:"100%"
+})}
 `;
 
 
@@ -67,6 +89,9 @@ const InfoContainer = styled.div`
 
 const Title = styled.h1`
   font-size: 70px;
+  ${mobile({
+   fontSize: "20px",
+})}
 `;
 
 const Desc = styled.p`
