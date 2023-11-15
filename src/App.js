@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // pages
 import Home from './pages/Home'
-import WishList from "./pages/WishList";
 import Cart from "./pages/Cart";
 
 
@@ -18,7 +17,6 @@ const App = () => {
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path="/cart" element={<Cart />} />
-            <Route path="/wishlist" element={<WishList />} />
           </Routes>
         </Router>
       </ShopContextProvider>

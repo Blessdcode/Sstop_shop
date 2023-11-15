@@ -28,8 +28,9 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.h1`
-  font-weight: 300;
+  font-weight: 400;
   text-align: center;
+  text-decoration: underline;
 `;
 
 const Top = styled.div`
@@ -225,7 +226,7 @@ const Cart = () => {
   return (
     <>
       <Announcement />
-      <Navbar />
+      {/* <Navbar /> */}
       <div>
 
         {totalAmount > 0 ? (
@@ -233,14 +234,14 @@ const Cart = () => {
 
 
             <Wrapper>
-              <Title>YOUR BAG</Title>
+              <Title>YOUR CART ITEMS</Title>
               <Top>
                 <Link to='/'>
                   <TopButton>CONTINUE SHOPPING</TopButton>
                 </Link>
                 <TopTexts>
                   <TopText>Shopping Bag({getTotalItemCount()})</TopText>
-                  <TopText onClick={() => navigate('/wishlist')}>Your Wishlist (0)</TopText>
+                  {/* <TopText onClick={() => navigate('/wishlist')}>Your Wishlist (0)</TopText> */}
                 </TopTexts>
 
               </Top>
