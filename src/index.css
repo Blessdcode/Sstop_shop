@@ -127,6 +127,17 @@ body {
   text-decoration: line-through;
 }
 
+.countHandler{
+  display: flex;
+  gap:3rem;
+  position: relative;
+}
+.countHandler .heading{
+  position: absolute;
+  top: -30px;
+  left: 25px;
+
+}
 
 /* 
 .cartDet {

@@ -164,9 +164,11 @@ const Button = styled.button`
   font-weight: 600;
 `;
 
+const Input = styled.div``
+
 
 const CartDet = (props) => {
-  const { cartItems, addToCart, removeCart, updateCartItem } = useContext(ShopContext)
+  const { cartItems, addToCart, removeCart, updateCartItem,getTotalItemCount } = useContext(ShopContext)
 
   const { id, name, price, img, newPrice, tag, off } = props.data
   const itemTotalPrice = cartItems[id] * price;
@@ -187,7 +189,8 @@ const CartDet = (props) => {
 
             <div className="countHandler">
               <AiOutlineMinus onClick={() => removeCart(id)} className='btn-add-rem' />
-              <input className='Input-el' value={cartItems[id]} onChange={(e) => updateCartItem(Number(e.target.value), id)} />
+              {/* <Input className='Input-el' value={cartItems[id]} onChange={(e) => updateCartItem(Number(e.target.value), id)} /> */}
+              <h1 className='heading'>{getTotalItemCount()}</h1>
               <AiOutlinePlus onClick={() => addToCart(id)} className='btn-add-rem' />
             </div>
           </div>
