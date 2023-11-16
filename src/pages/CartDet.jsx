@@ -189,8 +189,8 @@ const CartDet = (props) => {
 
             <div className="countHandler">
               <AiOutlineMinus onClick={() => removeCart(id)} className='btn-add-rem' />
-              {/* <Input className='Input-el' value={cartItems[id]} onChange={(e) => updateCartItem(Number(e.target.value), id)} /> */}
-              <h1 className='heading'>{getTotalItemCount()}</h1>
+              <input className='Input-el' value={cartItems[id]} onChange={(e) => updateCartItem(Number(e.target.value), id)} />
+              {/* <h1 className='heading'>{getTotalItemCount()}</h1> */}
               <AiOutlinePlus onClick={() => addToCart(id)} className='btn-add-rem' />
             </div>
           </div>

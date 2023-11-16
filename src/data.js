@@ -66,7 +66,7 @@ export const popularProducts = [
     name: "Men OverSize Fit short sleeve",
     img: pic8,
     dec: "Describtion",
-    price: 5098,
+    price: 50.98,
     type: "shirt",
     category: "Men",
     tag: "New"
@@ -76,7 +76,7 @@ export const popularProducts = [
     name: "Blouse-Black-Fitted",
     img: pic23,
     dec: "Describtion",
-    price: 19872,
+    price: 198.7,
     category: "women",
 
   },
@@ -85,7 +85,7 @@ export const popularProducts = [
     name: "Men-Classical-jacket+Hat",
     img: pic17,
     dec: "Describtion",
-    price: 15500,
+    price: 15.50,
     type: "jacket",
     category: "Men",
 
@@ -95,7 +95,7 @@ export const popularProducts = [
     name: "Original Sneakers SuperStar",
     img: pic15,
     dec: "Describtion",
-    price: 8000,
+    price: 80.00,
     type: "shoe",
     category: "Men",
     tag: "New"
@@ -105,7 +105,7 @@ export const popularProducts = [
     name: "Nike Sneakers ",
     img: pic12,
     dec: "Describtion",
-    price: 28545,
+    price: 28.45,
     type: "shoe",
     category: "Men",
     tag: "New"
@@ -115,7 +115,7 @@ export const popularProducts = [
     name: "lady red high heel",
     img: pic4,
     dec: "Describtion",
-    price: 7556,
+    price: 75.56,
     type: "shoe",
     category: "women",
     tag: "New"
@@ -125,7 +125,7 @@ export const popularProducts = [
     name: "Lady summer gown",
     img: pic24,
     dec: "Describtion",
-    price: 10800,
+    price: 10.80,
     newPrice: 7560,
     type: "gown",
     category: "women",
@@ -137,7 +137,7 @@ export const popularProducts = [
     name: "Female Casual corpreate",
     img: pic25,
     dec: "Describtion",
-    price: 12400,
+    price: 12.40,
     type: "shirt",
     category: "women",
   },
@@ -146,7 +146,7 @@ export const popularProducts = [
     name: "Men black skmei",
     img: pic9,
     dec: "Describtion",
-    price: 25264,
+    price: 25.64,
     type: "watch",
     tag: "New"
   },
@@ -155,7 +155,7 @@ export const popularProducts = [
     name: "Casio Men watch",
     img: pic7,
     dec: "Describtion",
-    price: 230.46,
+    price: 23.46,
     type: "watch",
   },
   {
@@ -163,8 +163,8 @@ export const popularProducts = [
     name: "Pupae winter jacket",
     img: pic11,
     dec: "Describtion",
-    price: 12056,
-    newPrice: 8439,
+    price: 120.6,
+    newPrice: 84.39,
     type: "women",
     category: "jacket",
     tag: "New",
@@ -175,8 +175,8 @@ export const popularProducts = [
     name: "core sneakers base",
     img: pic14,
     dec: "Describtion",
-    price: 35760,
-    newPrice: 25032,
+    price: 35.70,
+    newPrice: 25.32,
     type: "men",
     category: "shoe",
     // off: "30% offer"
@@ -186,8 +186,8 @@ export const popularProducts = [
     name: "Ladies midi shoulder bag",
     img: pic20,
     dec: "Describtion",
-    price: 8760,
-    newPrice: 6132,
+    price: 87.60,
+    newPrice: 61.32,
     type: "women",
     category: "bag",
   },
@@ -197,7 +197,7 @@ export const popularProducts = [
     name: "Ladies bodycon sleeve",
     img: pic26,
     dec: "Describtion",
-    price: 5760,
+    price: 57.60,
     tag: "New",
     type: "women",
     category: "shirt",
@@ -209,8 +209,8 @@ export const popularProducts = [
     name: "Man casual sport shoe",
     img: pic21,
     dec: "Describtion",
-    price: 65760,
-    newPrice: 46032,
+    price: 65.60,
+    newPrice: 40.32,
     type: "men",
     category: "shoe",
     // off: "30% offer"
@@ -224,6 +224,7 @@ export const featuredProducts = [
   {
     id: "qweraihede",
     img: pic3,
+    name: "Dark Bag",
     dec: "Describtion",
     oldPrice: 185.57,
     newPrice: 80.56,
@@ -235,9 +236,10 @@ export const featuredProducts = [
   {
     id: "sjhoiJioo",
     img: pic19,
+    name: "Travel Bag",
     dec: "Describtion",
     oldPrice: 314.66,
-    newPrice: 103.56,
+    newPrice: 10.56,
     type: "men",
     category: "bag",
   },
@@ -245,9 +247,10 @@ export const featuredProducts = [
   {
     id: "uiyuihifjk",
     img: pic5,
+    name: "Fancy Heels",
     dec: "Describtion",
-    oldPrice: 414.66,
-    newPrice: 303.56,
+    oldPrice: 41.66,
+    newPrice: 30.56,
     type: "women",
     category: "shoe",
     off: "30%"
@@ -255,9 +258,10 @@ export const featuredProducts = [
   {
     id: "cbnnnfghbk",
     img: pic13,
+    name: "Casio Watch",
     dec: "Describtion",
-    oldPrice: 614.66,
-    newPrice: 303.56,
+    oldPrice: 64.66,
+    newPrice: 30.56,
     type: "men",
     category: "watch",
     off: "30%"
@@ -266,9 +270,10 @@ export const featuredProducts = [
   {
     id: "ekijuoidh",
     img: pic18,
+    name: "Screen Glass",
     dec: "Describtion",
-    oldPrice: 614.66,
-    newPrice: 103.56,
+    oldPrice: 14.66,
+    newPrice: 10.56,
     type: "all",
     category: "glass",
     off: "30%"
@@ -276,13 +281,15 @@ export const featuredProducts = [
   {
     id: "diojoijD",
     img: pic22,
+    name: "Nike Shoe",
     dec: "Describtion",
-    price: 65760,
-    newPrice: 46032,
+    price: 45.09,
+    newPrice: 46.32,
     type: "men",
     category: "shoe",
     off: "30% offer"
   },
+
 
 
 ]

@@ -129,14 +129,17 @@ body {
 
 .countHandler{
   display: flex;
-  gap:3rem;
+  /* gap:10px; */
   position: relative;
 }
-.countHandler .heading{
-  position: absolute;
-  top: -30px;
-  left: 25px;
 
+.feature_product{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+}
+.feature_product h4{
 }
 
 /* 

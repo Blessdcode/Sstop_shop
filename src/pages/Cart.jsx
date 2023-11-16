@@ -294,7 +294,7 @@ const Cart = () => {
         ) : (
           <Text>
             <CartE>Your cart is Empty</CartE>
-            <Pra>Vist your watchlist</Pra>
+            {/* <Pra>Vist your watchlist</Pra> */}
           </Text>
         )}
       </div>
