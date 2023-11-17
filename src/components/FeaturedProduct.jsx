@@ -2,22 +2,22 @@ import styled from "styled-components";
 import { featuredProducts } from "../data";
 import Slider from "react-slick";
 import { mobile, small } from "../reponsive";
-
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { Component } from "react";
 
 const Container = styled.div`
     /* margin: 10px; */
-    height: 80vh; 
-    display: flex;
+    /* height: 80vh;  */
+    /* display: flex; */
     /* flex-wrap: wrap; */
     /* flex-direction:column ; */
     align-items: center;
     justify-content: center;
-    gap: 12px;
+    /* gap: 12px; */
     position: relative;
     border-radius: 10px;
-    overflow: scroll;
+    /* overflow: scroll; */
     
     ${small({
     flexDirection: "column"
@@ -27,11 +27,15 @@ const Container = styled.div`
     `;
 
 const Flex = styled.div`
-    width: 250px;
-    /* height: 30vh; */
-    /* margin-right: 10px; */
+    height: 30vh;
+    margin:0 10px;
     object-fit: cover;
     object-position: center;
+    ${small({
+    width: "100%"
+
+
+})}
     `
 const Box = styled.div`
    display: flex;
@@ -41,7 +45,7 @@ const Box = styled.div`
     `
 
 const Wrapper = styled.div`
-    display: flex;
+    /* display: flex; */
     `
 const Image = styled.img`
     /* margin-right: 10px; */
@@ -64,37 +68,73 @@ const Section = styled.section`
     /* height: 350px; */
 `
 
-const FeaturedProduct = () => {
-    const settings = {
+
+
+export default class Responsive extends Component {
+    render() {
+      var settings = {
         dots: true,
-        infinite: true,
+        infinite: false,
         speed: 500,
-        slidesToShow: 2,
-        slidesToScroll: 1
-    };
-    return (
-        <Section>
-            <Title>Related Products</Title>
-            <Container>
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        initialSlide: 0,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              initialSlide: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      };
+        return (
 
-                {featuredProducts.map((item) => (
-                    <Wrapper key={item.id}>
-                        <Flex>
-                            <Box>
-                                <Image src={item.img} alt={item.type} />
-                                <div className="feature_product">
+            <Section>
+                <Title>Related Products</Title>
+                <Container>
 
-                                    <h4>{item.name}</h4>
-                                    <br />
-                                    {/* <p>${item.newPrice}</p>                                     */}
-                                </div>
-                            </Box>
-                        </Flex>
-                    </Wrapper>
-                ))}
-            </Container>
-        </Section>
-    );
-};
+                    <Slider {...settings}>
+                        {featuredProducts.map((item) => (
+                            <Wrapper key={item.id}>
+                                <Flex>
+                                    <Box>
+                                        <Image src={item.img} alt={item.type} />
+                                        <div className="feature_product">
 
-export default FeaturedProduct;
+                                            <h4>{item.name}</h4>
+                                            <br />
+                                            {/* <p>${item.newPrice}</p>                                     */}
+                                        </div>
+                                    </Box>
+                                </Flex>
+                            </Wrapper>
+                        ))}
+                    </Slider>
+                </Container>
+            </Section >
+
+
+
+
+        );
+    }
+}

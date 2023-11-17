@@ -8,6 +8,7 @@ import Shop from "../pages/Shop";
 import Newsletter from '../components/Newsletter'
 import FeaturedProduct from '../components/FeaturedProduct'
 import Footer from '../components/Footer'
+import SimpleSlider from '../components/FeaturedProduct'
 // import SingleProduct from '../pages/SingleProduct'
 // import Login from '../pages/Login'
 // import Register from '../pages/Register'
@@ -26,7 +27,8 @@ const Home = () => {
             <Categories />
             <Shop />
             <Newsletter/>
-            <FeaturedProduct/>
+            {/* <FeaturedProduct/> */}
+            <SimpleSlider/>
             <Footer/>
 
         </div>
