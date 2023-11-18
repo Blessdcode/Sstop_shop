@@ -7,6 +7,7 @@ import {
     AiFillHome,
 
 } from "react-icons/ai";
+import { footerLinks } from '../data'
 
 import { logo, payment } from '../assets'
 import styled from "styled-components";
@@ -127,16 +128,10 @@ const Footer = () => {
             <Center>
                 <Title>Useful Links</Title>
                 <List>
-                    <ListItem>Home</ListItem>
-                    <ListItem>Cart</ListItem>
-                    <ListItem>Man Fashion</ListItem>
-                    <ListItem>Woman Fashion</ListItem>
-                    <ListItem>Accessories</ListItem>
-                    <ListItem>My Account</ListItem>
-                    <ListItem>Order Tracking</ListItem>
-                    <ListItem>Wishlist</ListItem>
-                    <ListItem>Wishlist</ListItem>
-                    <ListItem>Terms</ListItem>
+
+                    {footerLinks.map((links) => (
+                        <ListItem key={links.id}>{links.title}</ListItem>
+                    ))}
                 </List>
             </Center>
             <Right>
@@ -152,7 +147,7 @@ const Footer = () => {
                 </ContactItem>
                 <Payment src={payment} />
             </Right>
-        </Container>
+        </Container >
     );
 };
 

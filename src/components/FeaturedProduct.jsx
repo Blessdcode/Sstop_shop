@@ -17,6 +17,7 @@ const Container = styled.div`
     /* gap: 12px; */
     position: relative;
     border-radius: 10px;
+    overflow: hidden;
     /* overflow: scroll; */
     
     ${small({

@@ -293,3 +293,52 @@ export const featuredProducts = [
 
 
 ]
+
+export const footerLinks = [
+  {
+    id: "zidfjk",
+    title: "Home",
+  },
+  
+  {
+    id: "jjkln",
+    title: "Cart",
+  },
+  
+  {
+    id: "hnkn",
+    title: "Man Fashion",
+  },
+  
+  {
+    id: "jblkjn",
+    title: "Woman Fashion",
+  },
+  
+  {
+    id: "uhbkjl",
+    title: "Accessories",
+  },
+  
+  {
+    id: "j;kln;",
+    title: "My Account",
+  },
+  
+  {
+    id: "sdfV",
+    title: "Order Tracking",
+  },
+  
+  {
+    id: "sdESFVS",
+    title: "Wishlist",
+  },
+  
+  {
+    id: "dfjk",
+    title: "Terms",
+  },
+  
+]
+
