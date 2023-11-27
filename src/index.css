@@ -3,6 +3,11 @@ body {
   font-family: 'Urbanist', sans-serif;
 }
 
+a{
+  text-decoration: none;
+color: #000;
+}
+
 
 .products {
   padding: 20px;

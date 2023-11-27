@@ -4,7 +4,7 @@ import { MdOpenInNew } from 'react-icons/md'
 import { ShopContext } from '../context/shopContext'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import { Link } from 'react-router-dom';
 
 const Product = (props) => {
     const { id, name, price, img, dec, tag, off } = props.data
@@ -36,10 +36,12 @@ const Product = (props) => {
                     <AiOutlineShoppingCart onClick={handlerToCart} />
                 </div>
                 <div className='Icon'>
-                    <MdOpenInNew />
+                    <Link to={`/singleProduct/${id}`}>
+                        <MdOpenInNew />
+                    </Link>
                 </div>
                 <div className='Icon'>
-                    <AiFillHeart onClick={handlerToWish}/>
+                    <AiFillHeart onClick={handlerToWish} />
                 </div>
             </div>
             <ToastContainer />

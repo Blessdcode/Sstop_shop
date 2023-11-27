@@ -65,7 +65,7 @@ export const popularProducts = [
     id: 1,
     name: "Men OverSize Fit short sleeve",
     img: pic8,
-    dec: "Describtion",
+    dec: "Whether formally dressed or in casuals, style should never be compromised. Stop shop provides you with fashion items and accessories that fit your everyday lifestyle, from the workplace to the bar, all proven durable and of superior quality.",
     price: 50.98,
     type: "shirt",
     category: "Men",
@@ -75,7 +75,7 @@ export const popularProducts = [
     id: 2,
     name: "Blouse-Black-Fitted",
     img: pic23,
-    dec: "Describtion",
+    dec: "The cape Collar is different from other collars which looks so unique compared to others. Is a simplified vintage/regular fit dress, with a front button detail. Swing dresses are every woman's friend as they suit every body type...they can hide every imperfections on the waits on hips and can also flatter beautiful curves.Made of carefully selected high quality fabric. Fabric composition is polyester and spandex. Length of dress is on the knee. sizing is based on UK size chart",
     price: 198.7,
     category: "women",
 
@@ -84,8 +84,8 @@ export const popularProducts = [
     id: 3,
     name: "Men-Classical-jacket+Hat",
     img: pic17,
-    dec: "Describtion",
-    price: 15.50,
+    dec: "Whether formally dressed or in casuals, style should never be compromised. Stop shop provides you with fashion items and accessories that fit your everyday lifestyle, from the workplace to the bar, all proven durable and of superior quality.",
+    price: 23.50,
     type: "jacket",
     category: "Men",
 
@@ -94,7 +94,7 @@ export const popularProducts = [
     id: 4,
     name: "Original Sneakers SuperStar",
     img: pic15,
-    dec: "Describtion",
+    dec: "From a morning gym session to a day of errands to an evening with friends, keep your feet comfortable and your style on point in these adidas shoes. Pair them with your favourite running shorts for the ultimate athletic-casual vibe. A mesh upper helps you stay cool, while superlight cushioning cradles every step you take Made with a series of recycled materials, this upper features at least 50% recycled content. This product represents just one of our solutions to help end plastic waste.",
     price: 80.00,
     type: "shoe",
     category: "Men",
@@ -104,7 +104,7 @@ export const popularProducts = [
     id: 5,
     name: "Nike Sneakers ",
     img: pic12,
-    dec: "Describtion",
+    dec: "From a morning gym session to a day of errands to an evening with friends, keep your feet comfortable and your style on point in these adidas shoes. Pair them with your favourite running shorts for the ultimate athletic-casual vibe. A mesh upper helps you stay cool, while superlight cushioning cradles every step you take Made with a series of recycled materials, this upper features at least 50% recycled content. This product represents just one of our solutions to help end plastic waste",
     price: 28.45,
     type: "shoe",
     category: "Men",
@@ -114,7 +114,7 @@ export const popularProducts = [
     id: 6,
     name: "lady red high heel",
     img: pic4,
-    dec: "Describtion",
+    dec: "Whether at the office, on a date, out shopping or at a party, these shoes will make you stand out from the crowd. From now on, start a unique fashion experience.",
     price: 75.56,
     type: "shoe",
     category: "women",
@@ -124,7 +124,7 @@ export const popularProducts = [
     id: 7,
     name: "Lady summer gown",
     img: pic24,
-    dec: "Describtion",
+    dec: "the-deuce is a premium brand that majors in production of trendy unisex ready to wear pieces. At the-deuce, we are so intentional about giving our client value in exchange for their money. we all know standing out is the new cash and elegance is paramount. good outfit and dresses that align with our body shape boost out confidence and make one stand out..'What you wear is how you present yourself to the world, especially today, when human contacts are so quick. Fashion is instant language and we speak it.",
     price: 10.80,
     newPrice: 7560,
     type: "gown",
@@ -136,7 +136,7 @@ export const popularProducts = [
     id: 8,
     name: "Female Casual corpreate",
     img: pic25,
-    dec: "Describtion",
+    dec: "Whether at the office, on a date, out shopping or at a party, these shoes will make you stand out from the crowd. From now on, start a unique fashion experience.",
     price: 12.40,
     type: "shirt",
     category: "women",
@@ -145,7 +145,7 @@ export const popularProducts = [
     id: 9,
     name: "Men black skmei",
     img: pic9,
-    dec: "Describtion",
+    dec: "Whether formally dressed or in casuals, style should never be compromised. Stop shop provides you with fashion items and accessories that fit your everyday lifestyle, from the workplace to the bar, all proven durable and of superior quality.",
     price: 25.64,
     type: "watch",
     tag: "New"
@@ -154,7 +154,7 @@ export const popularProducts = [
     id: 10,
     name: "Casio Men watch",
     img: pic7,
-    dec: "Describtion",
+    dec: "This watch is a luxurious watch with a unique appearance that attracts the attention of everyone around you. It is designed with high-quality materials, adding a sense of refinement to your modeling. This beautiful watch is designed for your personality and style.",
     price: 23.46,
     type: "watch",
   },
@@ -162,7 +162,7 @@ export const popularProducts = [
     id: 11,
     name: "Pupae winter jacket",
     img: pic11,
-    dec: "Describtion",
+    dec: "Whether formally dressed or in casuals, style should never be compromised. Stop shop provides you with fashion items and accessories that fit your everyday lifestyle, from the workplace to the bar, all proven durable and of superior quality.",
     price: 120.6,
     newPrice: 84.39,
     type: "women",
@@ -174,7 +174,7 @@ export const popularProducts = [
     id: 12,
     name: "core sneakers base",
     img: pic14,
-    dec: "Describtion",
+    dec: "Born in the 1970s, the legendary adidas Superstar shoes have never gone out of style. This version is inspired by the early days of NYC hip-hop. Fat laces and 3-Stripes are inspired by vintage streetwear looks. The leather upper feels soft to the touch. adidas men's sneakers mixing comfort and style",
     price: 35.70,
     newPrice: 25.32,
     type: "men",
@@ -185,7 +185,7 @@ export const popularProducts = [
     id: 13,
     name: "Ladies midi shoulder bag",
     img: pic20,
-    dec: "Describtion",
+    dec: "This backpack is a stylish solution for efficiently packing makeup and everyday essentials. Provides an integrated compartment for your cosmetics, daily necessities, keeping your daily necessities within easy reach. Quick-access front pockets store your most-used items, while an admin panel keeps your accessories organized wherever you go throughout the day. With designated compartments for convenient storage of makeup, documents and personal items, you'll find everything you need, organized and at your fingertips. Very sturdy and durable.",
     price: 87.60,
     newPrice: 61.32,
     type: "women",
@@ -196,7 +196,7 @@ export const popularProducts = [
     id: 14,
     name: "Ladies bodycon sleeve",
     img: pic26,
-    dec: "Describtion",
+    dec: "Basics are best. They are the staple piece that every wardrobe needs and these black, white & Brown short sleeve cotton bodysuits are the perfect addition. Its cotton stretch material gives you a figure-flattering fit and with a sleeveless design, it is easily paired with any casual or weekend look. These bodysuits are the ultimate staple piece for all our dolls and is a must-have for you. Keep this look extra chilled with grey joggers and a puffer coat or dress it up with stiletto boots.",
     price: 57.60,
     tag: "New",
     type: "women",
@@ -208,7 +208,7 @@ export const popularProducts = [
     id: 15,
     name: "Man casual sport shoe",
     img: pic21,
-    dec: "Describtion",
+    dec: "From a morning gym session to a day of errands to an evening with friends, keep your feet comfortable and your style on point in these adidas shoes. Pair them with your favourite running shorts for the ultimate athletic-casual vibe. A mesh upper helps you stay cool, while superlight cushioning cradles every step you take Made with a series of recycled materials, this upper features at least 50% recycled content. This product represents just one of our solutions to help end plastic waste",
     price: 65.60,
     newPrice: 40.32,
     type: "men",
@@ -299,46 +299,46 @@ export const footerLinks = [
     id: "zidfjk",
     title: "Home",
   },
-  
+
   {
     id: "jjkln",
     title: "Cart",
   },
-  
+
   {
     id: "hnkn",
     title: "Man Fashion",
   },
-  
+
   {
     id: "jblkjn",
     title: "Woman Fashion",
   },
-  
+
   {
     id: "uhbkjl",
     title: "Accessories",
   },
-  
+
   {
     id: "j;kln;",
     title: "My Account",
   },
-  
+
   {
     id: "sdfV",
     title: "Order Tracking",
   },
-  
+
   {
     id: "sdESFVS",
     title: "Wishlist",
   },
-  
+
   {
     id: "dfjk",
     title: "Terms",
   },
-  
+
 ]
 
