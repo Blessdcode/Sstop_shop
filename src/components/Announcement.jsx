@@ -22,6 +22,9 @@ const Container = styled.div`
   justify-content: center;
   font-size: 14px;
   font-weight: 500;
+  /* position: fixed;
+  z-index:99;
+  width: 100%; */
   
   ${mobile({
   height: "50px",
@@ -45,7 +48,7 @@ const Announcement = () => {
   return (
     <>
       <Container>
-        <Text>Get Super Discount on Orders Over $150 when you shop on
+        <Text>Get Super Discount on Orders Over $15 when you shop on
 
           <Spacing>
             <Typed
@@ -57,7 +60,7 @@ const Announcement = () => {
               showCursor={false}
             />
           </Spacing>
-        <Text>Categories</Text>
+          <Text>Categories</Text>
         </Text>
       </Container>
     </>

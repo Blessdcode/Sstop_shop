@@ -22,7 +22,7 @@ const Home = () => {
             transition={{ duration: 0.5 }}
         >
 
-            <Announcement />
+            {/* <Announcement /> */}
             <Navbar />
             <Slider />
             <Categories />

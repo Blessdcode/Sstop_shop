@@ -9,22 +9,27 @@ import Announcement from './Announcement';
 import { ShopContext } from '../context/shopContext';
 
 const Container = styled.div`
-    height: 60px;;
-  ${mobile({ height: "40px" })}
+    /* height: 70px; */
+    margin: 0;
+    position: fixed;
+    top: 0;
+    z-index:99;
+    width: 100%;
+    background-color: #fff;
+  /* ${mobile({ height: "50px" })} */
 
 `
 const Wrapper = styled.div`
-    padding: 10px 20px;
+    padding: 0px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     text-align: center;
     ${mobile({
-      padding: "20px 0px",
-      justifyContent: "center",
-      alignItems: "flex-start",
+    padding: "0px",
+    justifyContent: "center",
+    alignItems: "flex-start",
       width: "100%",
-      
      })}
 
     
@@ -154,8 +159,8 @@ const Navbar = (props) => {
   const navigate = useNavigate()
   return (
     <>
-      {/* <Announcement/> */}
       <Container>
+      <Announcement/>
         <Wrapper>
           <Left>
             <Language>
