@@ -5,7 +5,6 @@ import { ShopContext } from '../context/shopContext'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 
 const Product = (props) => {
     const { id, name, price, img, dec, tag, off } = props.data

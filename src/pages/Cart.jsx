@@ -219,9 +219,18 @@ const Cart = () => {
     // You can also clear the cart from local storage if needed
     localStorage.removeItem('cart');
     // Navigate to the checkout page
-
-
   }
+
+  const handleCheckout = () => {
+    // Clear the cart by setting the quantity of all items to 0
+    for (const item in cartItems) {
+      updateCartItem(0, item);
+    }
+    // You can also clear the cart from local storage if needed
+    localStorage.removeItem('cart');
+    // Navigate to the checkout page
+    navigate('/checkout');
+  };
 
   return (
     <>
@@ -287,7 +296,7 @@ const Cart = () => {
                 <SummaryItemPrice> <b>$</b> {totalAmount.toFixed(2)}</SummaryItemPrice>
               </SummaryItem>
               <BTNS>
-                <Button onClick={() => navigate('/checkout')}>CHECKOUT NOW</Button>
+                <Button onClick={handleCheckout}>CHECKOUT NOW</Button>
                 <Buttons onClick={handleRemoveAll}> REMOVE ALL</Buttons>
 
               </BTNS>
