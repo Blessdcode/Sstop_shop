@@ -220,7 +220,7 @@ const Cart = () => {
     localStorage.removeItem('cart');
     // Navigate to the checkout page
 
- 
+
   }
 
   return (
@@ -246,10 +246,15 @@ const Cart = () => {
 
               </Top>
 
+
             </Wrapper>
           </>
         ) : (
-          <></>
+          <>
+            <Wrapper>
+
+            </Wrapper>
+          </>
         )}
 
         <div className='cartItems'>
@@ -265,39 +270,44 @@ const Cart = () => {
         </div>
 
 
-        {totalAmount > 0 ? (
-          <>
+        {totalAmount > 0 ? (<>
+
+          <Wrapper>
+            <Hr />
+            <Summary>
+              <SummaryTitle>ORDER SUMMARY</SummaryTitle>
 
 
-            <Wrapper>
-              <Hr />
-              <Summary>
-                <SummaryTitle>ORDER SUMMARY</SummaryTitle>
+              {/* <SummaryItem>
+                <SummaryItemText>Shipping Fee</SummaryItemText>
+                <SummaryItemPrice><b>$</b> 25.37</SummaryItemPrice>
+              </SummaryItem> */}
+              <SummaryItem type="total">
+                <SummaryItemText>Total</SummaryItemText>
+                <SummaryItemPrice> <b>$</b> {totalAmount.toFixed(2)}</SummaryItemPrice>
+              </SummaryItem>
+              <BTNS>
+                <Button onClick={() => navigate('/checkout')}>CHECKOUT NOW</Button>
+                <Buttons onClick={handleRemoveAll}> REMOVE ALL</Buttons>
+
+              </BTNS>
+            </Summary>
+          </Wrapper>
 
 
-                <SummaryItem>
-                  <SummaryItemText>Shipping Fee</SummaryItemText>
-                  <SummaryItemPrice><b>$</b> 25.37</SummaryItemPrice>
-                </SummaryItem>
-                <SummaryItem type="total">
-                  <SummaryItemText>Total</SummaryItemText>
-                  <SummaryItemPrice> <b>$</b> {totalAmount.toFixed(2)}</SummaryItemPrice>
-                </SummaryItem>
-                <BTNS>
-                  <Button>CHECKOUT NOW</Button>
-                  <Buttons onClick={handleRemoveAll}> REMOVE ALL</Buttons>
+        </>
 
-                </BTNS>
-              </Summary>
-            </Wrapper>
-          </>
-        ) : (
+        ) : <>
+          (
           <Text>
             <CartE>Your cart is Empty</CartE>
-            {/* <Pra>Vist your watchlist</Pra> */}
+            <TopButton onClick={() => navigate('/')}>CONTINUE SHOPPING</TopButton>
+            
           </Text>
-        )}
-      </div>
+          )
+        </>
+        }
+      </div >
       <Footer />
     </>
   )

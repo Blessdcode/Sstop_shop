@@ -6,9 +6,10 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { ShopContext } from '../context/shopContext'
 import { mobile } from "../reponsive";
+import { motion } from 'framer-motion';
 
 
-const Container = styled.div``;
+const Container = styled(motion.div)``;
 
 const Wrapper = styled.div`
   padding: 20px;
@@ -168,13 +169,18 @@ const Input = styled.div``
 
 
 const CartDet = (props) => {
-  const { cartItems, addToCart, removeCart, updateCartItem,getTotalItemCount } = useContext(ShopContext)
+  const { cartItems, addToCart, removeCart, updateCartItem, getTotalItemCount } = useContext(ShopContext)
 
   const { id, name, price, img, newPrice, tag, off } = props.data
   const itemTotalPrice = cartItems[id] * price;
 
   return (
-    <Container>
+    <Container
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1 }}
+    >
       <Wrapper>
 
         <div className='cartItem'>

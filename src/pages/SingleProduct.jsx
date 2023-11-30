@@ -12,11 +12,13 @@ import { ShopContext } from '../context/shopContext'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useContext } from 'react';
+import { motion } from 'framer-motion'
 
 
-const Container = styled.div``;
+const Container = styled(motion.div)``;
 
 const Wrapper = styled.div`
+height: 70vh;
   padding: 50px;
   display: flex;
   ${mobile({
@@ -161,7 +163,12 @@ const SingleProduct = (props) => {
   };
 
   return (
-    <Container>
+    <Container
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: .5 }}
+    >
       <Announcement />
       <Navbar />
       <Wrapper>

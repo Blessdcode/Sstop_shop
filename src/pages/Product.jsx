@@ -5,6 +5,7 @@ import { ShopContext } from '../context/shopContext'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const Product = (props) => {
     const { id, name, price, img, dec, tag, off } = props.data
@@ -21,12 +22,20 @@ const Product = (props) => {
         addToWish(id);
         toast.success(`${name} has been added to the WishList!!!`, {
             position: "top-left",
+            autoClose:"2000",
+            closeOnClick: "true",
+            pauseOnFocusLoss: "true",
+            theme:"dark",
+            draggable:"true",
+            newestOnTop:"false"
         });
     };
 
 
     return (
-        <div className='product'>
+        <div className='product'
+       
+        >
             <div className="circle"></div>
             <img src={img} alt={name} className='Image' />
             {tag && <div className='Title'>{tag}</div>}

@@ -81,8 +81,8 @@ export const ShopContextProvider = (props) => {
         }
       
         // Add the shipping fee to the total amount
-        const shippingFee = 25.37; // Replace with your actual shipping fee
-        totalAmount += shippingFee;
+        // const shippingFee = 25.37; Replace with your actual shipping fee
+        // totalAmount += shippingFee;
       
         return totalAmount;
       };
