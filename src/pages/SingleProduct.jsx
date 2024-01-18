@@ -18,7 +18,8 @@ import { motion } from 'framer-motion'
 const Container = styled(motion.div)``;
 
 const Wrapper = styled.div`
-height: 70vh;
+  height: 70vh;
+  margin-top: 2.5rem;
   padding: 50px;
   display: flex;
   ${mobile({

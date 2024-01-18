@@ -6,6 +6,8 @@ import SingleProduct from "./pages/SingleProduct";
 import { AnimatePresence } from 'framer-motion'
 import { ShopContextProvider } from "./context/shopContext";
 import Checkout from "./pages/Checkout";
+import Register from "./pages/Register";
+import Login from "./pages/Login";
 
 
 
@@ -20,6 +22,9 @@ const App = () => {
               <Route path='/' element={<Home />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/checkout" element={<Checkout />} />
+              <Route path="/register" element={<Register />} />
+            <Route path="/login" element={<Login />} />
+
               <Route path="/singleProduct/:id" element={<SingleProduct />} />
             </Routes>
           </Router>
